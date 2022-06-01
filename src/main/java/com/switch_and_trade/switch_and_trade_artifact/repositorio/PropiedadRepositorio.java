@@ -2,6 +2,7 @@ package com.switch_and_trade.switch_and_trade_artifact.repositorio;
 
 import com.switch_and_trade.switch_and_trade_artifact.entidad.Perfil;
 import com.switch_and_trade.switch_and_trade_artifact.entidad.Propiedad;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PropiedadRepositorio {
+public interface PropiedadRepositorio extends JpaRepository<Propiedad, Long> {
 
     List<Propiedad> findAllByLocalidadIgnoreCaseOrderByLocalidadAsc(String localidad);
 

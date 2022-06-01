@@ -21,11 +21,10 @@ import static javax.persistence.GenerationType.IDENTITY;
 public class Propiedad {
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
-    @Column(name = "id_propiedad")
+    @GeneratedValue (strategy = IDENTITY)
+    @Column(name="id_propiedad")
     private Long id;
 
-<<<<<<< HEAD
     @Column(name="provincia_propiedad", length = 25, nullable = false)
     private String provincia;
 
@@ -39,21 +38,6 @@ public class Propiedad {
     private String descripcion;
 
     @Column(name="tipo_propiedad", nullable = false)
-
-    @Column(name = "provincia_propiedad", length = 25, nullable = false)
-    private String provincia;
-
-    @Column(name = "localidad_propiedad", length = 100, nullable = false)
-    private String localidad;
-
-    @Column(name = "superficie_propiedad", nullable = false)
-    private Integer superficie;
-
-    @Column(name = "descripcion_propiedad", columnDefinition = "TEXT", nullable = true)
-    private String descripcion;
-
-    @Column(name = "tipo_propiedad", nullable = false)
->>>>>>> 4e4fa3ccc72e170a496abcbed0cc316b350aba0a
     private String tipo;
 
     @Column(name = "deseado_propiedad", nullable = false)
@@ -63,7 +47,7 @@ public class Propiedad {
     private Boolean eliminado;
 
     @ManyToOne(fetch = EAGER)
-    @JoinColumn(name = "propiedad_perfil", referencedColumnName = "id_perfil", nullable = false)
-    private Perfil perfil;
+    @JoinColumn(name="usuario_propiedad", referencedColumnName = "id_usuario")
+    private Usuario usuario;
 
 }
