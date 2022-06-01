@@ -9,15 +9,16 @@ import javax.persistence.*;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Table(name="rol")
+@Table(name = "rol")
 @Getter
 @Setter
 @NoArgsConstructor
 public class Rol {
     @Id
-    @GeneratedValue(strategy =IDENTITY)
-    @Column(name="id_rol")
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "id_rol")
     private Long id;
-    @Column(name="nombre_rol", length = 30, nullable = false)
+
+    @Column(name = "nombre_rol", length = 30, nullable = false)
     private String nombre;
 }
