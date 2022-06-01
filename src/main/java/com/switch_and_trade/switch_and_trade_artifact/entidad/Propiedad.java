@@ -25,6 +25,7 @@ public class Propiedad {
     @Column(name = "id_propiedad")
     private Long id;
 
+    
     @Column(name = "provincia_propiedad", length = 25, nullable = false)
     private String provincia;
 
