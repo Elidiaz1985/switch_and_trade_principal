@@ -22,22 +22,29 @@ import static javax.persistence.GenerationType.IDENTITY;
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy=IDENTITY)
-    @Column(name="id_usuario")
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "id_usuario")
     private Long id;
 
+<<<<<<< HEAD
     @Column(name="email_usuario",length = 60,unique = true,nullable =false)
     private String email;
 
     @Column(name="clave_usuario",nullable = false)
+=======
+    @Column(name = "email_usuario", length = 60, unique = true, nullable = false)
+    private String email;
+
+    @Column(name = "clave_usuario", nullable = false)
+>>>>>>> 4e4fa3ccc72e170a496abcbed0cc316b350aba0a
     private String clave;
 
     @ManyToOne(fetch = EAGER)
-    @JoinColumn(name = "rol_usuario",referencedColumnName = "id_rol")
+    @JoinColumn(name = "rol_usuario", referencedColumnName = "id_rol")
     private Rol rol;
 
     @OneToOne(fetch = EAGER)
-    @JoinColumn(name="perfil_usuario",referencedColumnName = "id_perfil")
+    @JoinColumn(name = "perfil_usuario", referencedColumnName = "id_perfil")
     private Perfil perfil;
 
     @Column(name = "eliminado_usuario", nullable = false)
