@@ -25,8 +25,10 @@ public class Usuario {
     @GeneratedValue(strategy=IDENTITY)
     @Column(name="id_usuario")
     private Long id;
+
     @Column(name="email_usuario",length = 60,unique = true,nullable =false)
     private String email;
+
     @Column(name="clave_usuario",nullable = false)
     private String clave;
 
