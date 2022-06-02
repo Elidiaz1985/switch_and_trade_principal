@@ -22,8 +22,10 @@ public interface PropiedadRepositorio extends JpaRepository<Propiedad, Long> {
 
     List<Propiedad> findAllByDeseado(Boolean deseado);
 
-    @Modifying
+    //buscar por superficie descendente
+
+   /* @Modifying
     @Query("UPDATE Propiedad p SET p.eliminado = false WHERE p.id = ?1")
-    void enableById(Long id);
+    void enableById(Long id);*/
 
 }

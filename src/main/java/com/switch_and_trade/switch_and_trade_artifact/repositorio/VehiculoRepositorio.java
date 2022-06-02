@@ -21,9 +21,9 @@ public interface VehiculoRepositorio extends JpaRepository<Vehiculo, Long> {
 
     List<Vehiculo> findAllByDeseado(Boolean deseado);
 
-    @Modifying
+   /* @Modifying
     @Query("UPDATE Vehiculo v SET v.eliminado = false WHERE p.id = ?1")
-    void enableById(Long id);
+    void enableById(Long id);*/
 
 
 }
