@@ -19,9 +19,9 @@ import static javax.persistence.FetchType.EAGER;
 @Repository
 public interface PerfilRepositorio extends JpaRepository<Perfil, Long> {
 
-    List<Perfil> findAllByNombreOrApellidoIgnoreAllCaseOrderByNombreAsc(String nombre, String apellido);
+    List<Perfil> findAllByNombreOrApellidoIgnoreCaseOrderByNombreAsc(String nombre, String apellido);
 
-    List<Perfil> findAllByNombreAndApellidoIgnoreAllCaseOrderByNombreAsc(String nombre, String apellido);
+    List<Perfil> findAllByNombreAndApellidoIgnoreCaseOrderByNombreAsc(String nombre, String apellido);
 
     List<Perfil> findAllByNombreIgnoreCaseOrderByNombreAsc(String nombre);
 
@@ -31,9 +31,9 @@ public interface PerfilRepositorio extends JpaRepository<Perfil, Long> {
 
     List<Perfil> findAllByProvinciaOrderByProvinciaAsc(String localidad);
 
-    @Modifying
+   /* @Modifying
     @Query("UPDATE Perfil p SET p.eliminado = false WHERE p.id = ?1")
-    void enableById(Long id);
+    void enableById(Long id);*/
 
     //el repositorio esta en ingles por las palabras reservadas que usa
 }

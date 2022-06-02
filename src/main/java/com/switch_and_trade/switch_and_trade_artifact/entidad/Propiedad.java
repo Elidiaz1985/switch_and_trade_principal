@@ -47,7 +47,7 @@ public class Propiedad {
     private Boolean eliminado;
 
     @ManyToOne(fetch = EAGER)
-    @JoinColumn(name="usuario_propiedad", referencedColumnName = "id_usuario")
-    private Usuario usuario;
+    @JoinColumn(name="perfil_propiedad", referencedColumnName = "id_perfil")
+    private Perfil perfil;
 
 }
